@@ -1,0 +1,23 @@
+name: smoke-test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install CPU-only PyTorch
+        run: pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+
+      - name: Run smoke test (no GPU, no model, no network needed)
+        run: python experiments/raise_smoke_test.py

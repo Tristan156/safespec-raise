@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "safespec-raise: 长上下文推测解码的收益判据与增量回退调度（参考实现）"
+abstract: >-
+  Reference implementation of a falsifiable break-even criterion for long-context
+  speculative decoding, together with RAISE, a scheduling scheme targeted at the
+  dominant cause of slowdown (the extra target forward pass on mismatched rounds).
+  Key finding: under the invariant of exactly one target forward pass per round,
+  draft depth k is not an independent gain lever; long-context slowdown is
+  determined by the per-round fixed overhead of the execution path, not by the
+  speculative decoding mechanism itself.
+authors:
+  - family-names: "Yin"
+    given-names: "Wentao"
+    alias: "Tristan156"
+version: 1.0.0
+date-released: "2026-09-23"
+license: MIT
+repository-code: "https://github.com/Tristan156/safespec-raise"
+keywords:
+  - speculative-decoding
+  - llm-inference
+  - long-context
+  - efficient-inference
+  - inference-scheduling

@@ -1,0 +1,10 @@
+# 长上下文推测解码复现 —— 依赖
+# 注意：PyTorch 请按你的 CUDA 版本单独安装，例如
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+
+torch>=2.4
+transformers>=5.0          # 依赖 DynamicCache.layers[i].crop(n) 与 past_key_values 原地更新语义
+accelerate>=0.33
+numpy>=1.26
+scipy>=1.11
+datasets>=2.19             # 下载 LongBench 数据时可用

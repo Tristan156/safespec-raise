@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# 实验产物
+experiments/results_*/
+data/
+*.jsonl
+*.csv
+!docs/*.csv
+
+# 模型权重
+*.safetensors
+*.bin
+*.pt
+*.pth
+models/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+nohup.out

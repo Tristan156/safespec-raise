@@ -1,0 +1,8 @@
+# 统一行尾，避免 Windows 检出后脚本出现 CRLF 差异
+* text=auto eol=lf
+
+*.py   text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+*.toml text eol=lf
+*.cff  text eol=lf

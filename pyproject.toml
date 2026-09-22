@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "safespec"
+version = "1.0.0"
+description = "长上下文推测解码的收益判据与增量回退调度（RAISE）参考实现"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Wentao Yin" }]
+keywords = ["speculative-decoding", "llm-inference", "long-context", "efficient-inference"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+# 注意：torch 请按你的 CUDA 版本单独安装；transformers 需 5.x
+runtime = [
+    "torch>=2.4",
+    "transformers>=5.0",
+    "accelerate>=0.33",
+    "scipy>=1.11",
+]
+
+[project.urls]
+Repository = "https://github.com/Tristan156/safespec-raise"
+
+[tool.setuptools]
+packages = ["safespec"]
